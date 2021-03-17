@@ -25,4 +25,4 @@ sed 's+THBD+'$user1'+g' simple-edit/bash.bashrc > /data/data/com.termux/files/us
 sed 's+THBD3+'$user'+g' simple-edit/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
 rm -rf simple-edit
 figlet -f slant Mao2116 | lolcat
-figlet -f big BDhackers008 | lolcat
+figlet -f big BDhackers009 | lolcat
