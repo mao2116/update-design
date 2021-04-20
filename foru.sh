@@ -29,6 +29,7 @@ do
     then
     touch $PREFIX/etc/mao.txt
     printf $mao2 > $PREFIX/etc/mao.txt
+    cd $PREFIX/etc
      xp=$(cat mao.txt)
      echo -e "\033[1;92m$xp Is Your Password"
     break
