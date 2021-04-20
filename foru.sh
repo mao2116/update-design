@@ -57,6 +57,7 @@ then
   git clone https://github.com/mao2116/simple-edit
   cd simple-edit
   mv  loding.sh /data/data/com.termux/files/usr/etc
+  cd update-design
   sed 's+THBD+'$user1'+g' simple-edit/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
   sed 's+THBD3+'$user'+g' simple-edit/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
   rm -rf simple-edit
