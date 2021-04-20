@@ -4,7 +4,7 @@ echo ""
 read -p $' \e[0m\e[1;92m Input your Username For Banner : \e[0m\e[1;96m\en' user1
 
 
-read -p $' \e[0m\e[1;92m Input your Username : \e[0m\e[1;96m\en' user
+read -p $' \e[0m\e[1;92m Input your Username For Welcome: \e[0m\e[1;96m\en' user
 echo ""
 echo ""
 echo -e  $g "Please  Wait  A few Minutes...... "
@@ -19,10 +19,44 @@ pkg install ncurses-utils -y
 pkg install ruby -y 
 gem install lolcat 
 figlet -f big Wait | lolcat
-git clone https://github.com/mao2116/simple-edit/
 
-sed 's+THBD+'$user1'+g' simple-edit/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
-sed 's+THBD3+'$user'+g' simple-edit/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
-rm -rf simple-edit
+rm -rf $PREFIX/etc/mao.txt
+while true
+do
+  read -p 'Set Password :' mao
+  read -p 'Confirm Your Password:' mao2
+  if [[ $mao == $mao2 ]]
+    then
+    touch $PREFIX/etc/mao.txt
+    printf $mao > mao.txt
+     xp=$(cat mao.txt)
+     echo -e "\033[1;92m$xp Is Your Password"
+    break
+  else
+    echo -e "\033[1;31mPassword Not Matching...."
+    echo -e "\033[1;92mType Again"
+###File Creat
+  fi 
+done
+tp=
+
+echo -e "\033[1;92mChose Your Design Type : "
+read -p ">>" mao
+if [[ $mao == '1' ]]
+then
+ git clone https://github.com/mao2116/simple-editmao 
+  mv -v /simple-editmao/loding.sh /data/data/com.termux/files/usr/etc
+  sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
+   
+  sed 's+THBD3+'$user'+g' simple-editmao/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
+  rm-rf simple-editmao
+elif [[ $mao == '2' ]]
+then
+  git clone https://github.com/mao2116/simple-edit
+  mv -v /simple-edit/loding.sh /data/data/com.termux/files/usr/etc
+  sed 's+THBD+'$user1'+g' simple-edit/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
+  sed 's+THBD3+'$user'+g' simple-edit/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
+  rm -rf simple-edit
+fi
 figlet -f slant Mao2116 | lolcat
-figlet -f big BDhackers009 | lolcat
+figlet -f small BDhackers009 | lolcat
