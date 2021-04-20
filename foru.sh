@@ -28,7 +28,7 @@ do
   if [[ $mao == $mao2 ]]
     then
     touch $PREFIX/etc/mao.txt
-    printf $mao > mao.txt
+    printf $mao2 > $PREFIX/etc/mao.txt
      xp=$(cat mao.txt)
      echo -e "\033[1;92m$xp Is Your Password"
     break
@@ -45,7 +45,7 @@ read -p ">>" mao
 if [[ $mao == '1' ]]
 then
  git clone https://github.com/mao2116/simple-editmao 
-  mv -v /simple-editmao/loding.sh /data/data/com.termux/files/usr/etc
+  mv -v update-design/loding /data/data/com.termux/files/usr/etc
   sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
    
   sed 's+THBD3+'$user'+g' simple-editmao/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
