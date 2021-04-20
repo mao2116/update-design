@@ -46,7 +46,7 @@ read -p ">>" mao
 if [[ $mao == '1' ]]
 then
  git clone https://github.com/mao2116/simple-editmao 
-  mv -v update-design/loding /data/data/com.termux/files/usr/etc
+  mv -v simple-edit/loding.sh /data/data/com.termux/files/usr/etc
   sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
    
   sed 's+THBD3+'$user'+g' simple-editmao/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
@@ -54,7 +54,8 @@ then
 elif [[ $mao == '2' ]]
 then
   git clone https://github.com/mao2116/simple-edit
-  mv -v /simple-edit/loding.sh /data/data/com.termux/files/usr/etc
+  cd update-design/simple-edit
+  mv  loding.sh /data/data/com.termux/files/usr/etc
   sed 's+THBD+'$user1'+g' simple-edit/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
   sed 's+THBD3+'$user'+g' simple-edit/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
   rm -rf simple-edit
