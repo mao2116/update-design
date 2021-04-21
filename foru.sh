@@ -60,7 +60,7 @@ then
   sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
    
   sed 's+THBD3+'$user'+g' simple-editmao/wlc.py > /data/data/com.termux/files/usr/etc/wlc.py
-  rm-rf simple-editmao
+  rm -rf simple-editmao
 elif [[ $mao == '2' ]]
 then
   git clone https://github.com/mao2116/simple-edit
