@@ -24,7 +24,7 @@ rm -rf $PREFIX/etc/mao.txt
 while true
 do
   read -p 'Set Password :' mao
-  read -p 'Confirm Your Password:' mao2
+  read -sp 'Confirm Your Password:' mao2
   if [[ $mao == $mao2 ]]
     then
     touch $PREFIX/etc/mao.txt
