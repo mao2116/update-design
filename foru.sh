@@ -40,9 +40,11 @@ do
   fi 
 done
 tp='[2. ]┌───T─I─M─E───┐┌───D─A─T─E────>
+
 ┌─[ 00:00 PM ]──[ D M Y ]
 ├─[~]
-└─>Mao2116[~]:#'
+└─>Mao2116[~]:#
+'
 tpp='[1. ]~$'
 echo $tpp |lolcat
 echo $tp |lolcat
@@ -52,7 +54,7 @@ read -p ">>" mao
 if [[ $mao == '1' ]]
 then
  git clone https://github.com/mao2116/simple-editmao 
-  cd simple-edit
+  cd simple-editmao
    mv  simple-editmao/loding.sh /data/data/com.termux/files/usr/etc
   cd $PREFIX/etc
   sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
@@ -71,3 +73,4 @@ then
 fi
 figlet -f slant Mao2116 | lolcat
 figlet -f small BDhackers009 | lolcat
+echo -e '\033[0;0m'
