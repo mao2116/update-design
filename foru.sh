@@ -55,7 +55,7 @@ if [[ $mao == '1' ]]
 then
  git clone https://github.com/mao2116/simple-editmao 
   cd simple-editmao
-   mv  simple-editmao/loding.sh /data/data/com.termux/files/usr/etc
+   mv loding.sh /data/data/com.termux/files/usr/etc
   cd $PREFIX/etc
   sed 's+THBD+'$user1'+g' simple-editmao/bash.bashrc > /data/data/com.termux/files/usr/etc/bash.bashrc
    
