@@ -39,7 +39,13 @@ do
 ###File Creat
   fi 
 done
-tp=
+tp='[2. ]┌───T─I─M─E───┐┌───D─A─T─E────>
+┌─[ 00:00 PM ]──[ D M Y ]
+├─[~]
+└─>Mao2116[~]:#'
+tpp='[1. ]~$'
+echo $tpp |lolcat
+echo $tp |lolcat
 
 echo -e "\033[1;92mChose Your Design Type : "
 read -p ">>" mao
